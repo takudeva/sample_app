@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   def create
     list = List.new(list_params)
     list.save
-    redirect_to '/homes/top'
+    redirect_to list_path(list.id)
   end
 
   def index
@@ -17,7 +17,15 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
+  def update
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to list_path(list.id)
+  end
+
   def edit
+    @list = List.find(params[:id])
+
   end
 
   private
