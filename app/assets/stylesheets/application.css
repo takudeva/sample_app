@@ -21,6 +21,11 @@
   box-sizing: border-box;
 }
 
+/*common*/
+header, h1, nav, .list-comment {
+  font-family: 'kaushan', cursive, sans-serif;
+}
+
 /*header from here*/
 header {
   width: 90%;
@@ -70,8 +75,29 @@ main {
   width: 200px;
   height: 250px;
   margin: 10px;
+  position: relative
 }
 
 .list-comment {
   width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.list-body {
+  display: block;
+  color: gray;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-title {
+  display: block;
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
